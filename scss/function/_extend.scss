@@ -1,0 +1,100 @@
+@use '../variables/' as *;
+@use './mixin' as *;
+//extend 和 mixin 為同一層，且在同樣的finction資料夾中。
+// 不可直接調用整個function，只能調用mixin檔案。
+// extend 引用繼承語法會置頂
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+%flex-flexEnd {
+    display: flex;
+    justify-content: flex-end;
+}
+
+%btn-animat {
+    border-radius: $radius-ex;
+    @extend %flex-center;
+    height: 60px;
+    width: 210px !important;
+    @include bordered;
+    margin: $space-md auto;
+    cursor: pointer;
+    color: $lesser-4;
+    letter-spacing: $space-sm;
+    padding-left: $space-sm;
+
+    &:hover {
+        @include amt($name: myRoter);
+
+        span {
+            @include amt(mystorm);
+        }
+    }
+}
+
+%input-style {
+    @include bordered;
+    padding: $space-xs;
+    border-radius: 5px;
+    color: $lesser-4;
+    font-weight: $f-w-m;
+
+    &:focus {
+        outline: 2px solid var(--lesser-3);
+    }
+
+    &::placeholder {
+        color: $lesser-3;
+        font-size: $f-s-sm;
+        font-weight: normal;
+    }
+}
+
+%img-cover {
+    // 搭配object-fit:cover時一定要寫寬高100%
+    object-fit: cover;
+    width:100%;  //reset已經設定過，但為保安全可以寫
+    height: 100%;
+}
+
+%img-contain {
+    // 搭配object-fit:contain時一定要寫寬高100%
+    object-fit: contain;
+    width:100%;  //reset已經設定過，但為保安全可以寫
+    height: 100%;
+}
+
+
+
+
+%simple-line {
+    overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+%multiple-lines {
+    // 多行省略: 5個設定
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    // -webkit-line-clamp: 4; //由於每個多行省略的行數顯現不同，故不寫在共用設定裡。
+}
+
+
+%list-title {
+    font-size: $f-s-lg;
+    font-weight: $f-w-m;
+    margin-bottom: $space-xs;
+}
+

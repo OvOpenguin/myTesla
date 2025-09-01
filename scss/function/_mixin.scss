@@ -1,0 +1,24 @@
+@use '../variables/' as *;
+
+@mixin border-b($color: $Charcoal, $width: 3px) {
+    border-bottom: $width solid $color;
+}
+
+@mixin bordered($width: 1px, $color: $lesser-4) {
+    border: solid $width $color;
+}
+
+// 動畫共用的大致設定+
+@mixin amt($name, $speed: .75s) {
+    animation: $name $speed both;
+}
+
+// 玻璃擬態只能寫在 mixin
+@mixin glassmorphism {
+    @include bordered($width: 2px, $color: $alpha-w-40);
+    // 原：border: 2px solid var(--alpha-w-40);
+    -webkit-backdrop-filter: blur(--alpha-w-40);
+    background-image: linear-gradient(to bottom right, $alpha-w-20, $alpha-w-50);
+    box-shadow: 2px 2px 5px $alpha-w-20,
+        inset -1px -1px 2px $alpha-w-40;
+}

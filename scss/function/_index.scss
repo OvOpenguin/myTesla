@@ -1,0 +1,4 @@
+@forward "../function/extend";
+@forward "../function/mixin";
+
+// 若要匯入整個資料夾，需要增加一個_index.scss，並在檔案內@forward進同一資料夾內的scss

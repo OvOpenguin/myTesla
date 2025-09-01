@@ -1,0 +1,92 @@
+@use "reset";
+@use "./variables" as *;
+@use "./function" as *;
+
+
+// 換圖輪播
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper {
+    width: 100%;
+    height: 600px;
+    margin: 20px auto;
+}
+
+.append-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.append-buttons button {
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid #007aff;
+    color: #007aff;
+    text-decoration: none;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin: 0 10px;
+    font-size: 13px;
+}
+
+// 共用區
+
+section {
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.title {
+    margin: $space-title;
+
+    h2 {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-size: $f-s-xl;
+        font-weight: 600;
+        border-left: 5px solid $Charcoal;
+        padding-left: $space-sm;
+
+        span {
+            font-size: $f-s-sm;
+            padding-left: 10px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            height: 3px;
+            right: 0;
+            width: calc(100% - 10rem);
+            background-color: $Charcoal;
+            // margin-left: 9rem; //相對於文字的位置使用rem
+        }
+    }
+}
+
+.list-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}

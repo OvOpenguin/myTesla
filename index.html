@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Tesla web</title>
+    <!-- Swiper CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- My css -->
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <!-- Slider main container -->
+    <div class="swiper mySwiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="./images/Homepage-Model-3-Desktop-US.avif" alt=""></div>
+            <div class="swiper-slide"><img src="./images/Homepage-Model-S-Desktop-US.avif" alt=""></div>
+            <div class="swiper-slide"><img src="./images/Homepage-Model-X-Desktop-US.avif" alt=""></div>
+            <div class="swiper-slide"><img src="./images/Homepage-Model-Y-2-Hero-Desktop-APAC-LHD.avif" alt=""></div>
+            <div class="swiper-slide"><img src="./images/Homepage-Model-Y-Desktop-Global-v2.avif" alt=""></div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+
+        <p class="append-buttons">
+            <button class="prepend-2-slides">Prepend 2 Slides</button>
+            <button class="prepend-slide">Prepend Slide</button>
+            <button class="append-slide">Append Slide</button>
+            <button class="append-2-slides">Append 2 Slides</button>
+        </p>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+    <!-- 最新商品 -->
+    <section id="news">
+        <header class="title">
+            <h2>最新商品<span>NEW</span></h2>
+        </header>
+        <!--簡寫方法 div>item*3>a[href="#"]>h3{NEW Title}+img[src="./images/"] -->
+        <div class="list-box">
+
+                <item>
+                    <a href="#">
+                        <h3>NEW Title</h3>
+                        <img src="./images2/new1.jpg" alt="">
+                    </a>
+                </item>
+                <item>
+                    <a href="#">
+                        <h3>NEW Title</h3>
+                        <img src="./images2/new2.jpg" alt="">
+                    </a>
+                </item>
+                <item>
+                    <a href="#">
+                        <h3>NEW Title</h3>
+                        <img src="./images2/new3.jpg" alt="">
+                    </a>
+                </item>
+            
+        </div>
+    </section>
+
+    <section id="hot">
+        <header class="title">
+            <h2>熱門商品<span>HOT</span></h2>
+        </header>
+
+            <div class="list-box">
+                <item>
+                    <a href="#">
+                        <h3>NEW Title</h3>
+                        <img src="./images2/hot1.jpg" alt="">
+                    </a>
+                </item>
+                <item>
+                    <a href="#">
+                        <h3>NEW Title</h3>
+                        <img src="./images2/hot2.jpg" alt="">
+                    </a>
+                </item>
+                <item>
+                    <a href="#">
+                        <h3>NEW Title</h3>
+                        <img src="./images2/hot3.jpg" alt="">
+                    </a>
+                </item>
+            </div>
+
+    </section>
+
+
+
+
+
+    <!-- Swiper js -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- My js -->
+    <script src="./js/scripts.js"></script>
+</body>
+
+</html>
