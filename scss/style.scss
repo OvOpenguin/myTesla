@@ -85,8 +85,150 @@ section {
     }
 }
 
-.list-box{
+.list-box {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+
+    .item {
+        a {
+            position: relative;
+
+            h3 {
+                position: absolute;
+                background-color: $alpha-b-60;
+                width: 100%;
+                height: 100%;
+                color: $White;
+                font-size: $f-s-xl;
+                @extend %flex-center;
+                opacity: 0;
+                transition: 0.4s;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+#news {
+    .mask {
+        mask-size: contain;
+        mask-repeat: no-repeat;
+        mask-position: center;
+    }
+
+    .m1 {
+        mask-image: url(../images2/blobs-3.svg);
+    }
+
+    .m2 {
+        mask-image: url(../images2/blobs-2.svg);
+    }
+
+    .m3 {
+        mask-image: url(../images2/blobs-1.svg);
+    }
+}
+
+
+// clip-path
+#hot {
+
+    .clip {
+        //橢圓形： w h 50% = 容器一樣尺寸，x y 以形狀中心為0，50%則為置中。
+        // clip-path: ellipse(70% 40% at 50% 50%);
+        //多邊形
+        clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    }
+
+    //多邊形 polygon()
+    .c1 {
+        clip-path: polygon(50% 0%, 0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%);
+    }
+
+    .c2 {
+        clip-path: ellipse(30% 50% at 50% 50%);
+    }
+
+}
+
+#shop {
+    .container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 320px);
+
+        >a {
+            background-size: cover;
+            background-position: center;
+            @extend %flex-center;
+            padding: 50px;
+
+            h3 {
+                font-weight: 700;
+                font-size: $f-s-lg;
+            }
+        }
+
+        .s1 {
+            background-image: url(../images/shop_1.png);
+        }
+
+        .s2 {
+            background-image: url(../images/shop_2.png);
+            color: $White;
+        }
+
+        .s3 {
+            background-image: url(../images/shop_3.png);
+            grid-column: 1/3;
+            justify-content: end;
+        }
+
+        .s4 {
+            background-image: url(../images/shop_4.png);
+            grid-row: 3/5;
+            align-items: start;
+        }
+
+        .s5 {
+            background-image: url(../images/shop_5.png);
+            color: $White;
+        }
+
+        .s6 {
+            background-image: url(../images/shop_6.png);
+            color: $White;
+        }
+    }
+
+}
+
+
+.details-box{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 5fr 4fr;
+
+}
+
+// jquery ui tab按鍵設定 (需要從F12開發者工具查找它的class)
+.ui-tabs .ui-tabs-nav{
+ display: flex;
+}
+
+
+
+footer {
+    margin-top: $space-lg;
+    height: 50px;
+    background-color: $Black;
+    color: $White;
+    text-align: center;
+    line-height: 50px;
+
 }

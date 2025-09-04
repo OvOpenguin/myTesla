@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Zara Details</title>
+    <!-- jquery ui -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <!-- My CSS -->
+    <link rel="stylesheet" href="./css/style.min.css">
+
+
+</head>
+
+<body>
+    <header class="navbar">NAVBAR</header>
+    <section>
+        <main>
+            <header class="title">
+                <h2>ZT系列 軟質 T 恤-中灰色</h2>
+            </header>
+            <div class="details-box">
+                <!-- 頁籤相簿 jquery ui tabs -->
+
+                <div id="tabs">
+
+                    <div class="tab-wrap">
+                        <!-- 頁籤內容 -->
+                        <div id="tabs-1">
+                            <img src="./images2/details/detail-1.jpg" alt="">
+                        </div>
+                        <div id="tabs-2">
+                            <img src="./images2/details/detail-2.jpg" alt="">
+                        </div>
+                        <div id="tabs-3">
+                            <img src="./images2/details/detail-3.jpg" alt="">
+                        </div>
+                        <div id="tabs-4">
+                            <img src="./images2/details/detail-4.jpg" alt="">
+                        </div>
+                        <div id="tabs-5">
+                            <img src="./images2/details/detail-5.jpg" alt="">
+                        </div>
+                        <!-- 頁籤按鈕 -->
+
+                        <ul>
+                            <li><a href="#tabs-1"><img src="./images2/details/detail-1.jpg" alt=""></a></li>
+                            <li><a href="#tabs-2"><img src="./images2/details/detail-2.jpg" alt=""></a></li>
+                            <li><a href="#tabs-3"><img src="./images2/details/detail-3.jpg" alt=""></a></li>
+                            <li><a href="#tabs-4"><img src="./images2/details/detail-4.jpg" alt=""></a></li>
+                            <li><a href="#tabs-5"><img src="./images2/details/detail-5.jpg" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 詳細規格 -->
+                <div class="detail"></div>
+            </div>
+            <!-- HTML編輯器 -->
+            <div class="content"></div>
+
+
+        </main>
+
+
+
+    </section>
+
+
+
+    <footer>copyright &copy; 特斯拉 </footer>
+
+    <!-- jquery 原生碼 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- jquery ui CDN -->
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+
+    <script>
+        // jquery ui tabs
+        $(function () {
+            $("#tabs").tabs();
+        });
+    </script>
+</body>
+
+</html>

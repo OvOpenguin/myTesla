@@ -1,3 +1,5 @@
+
+// Swiper 換圖輪播 javascript
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
   centeredSlides: true,
@@ -10,10 +12,10 @@ var swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  
+
   // 這裡加入 RWD 斷點設定
   breakpoints: {
-     500: {
+    500: {
       slidesPerView: 1,
       spaceBetween: 10,
     },
@@ -71,3 +73,7 @@ document
       '<div class="swiper-slide">Slide ' + ++appendNumber + "</div>",
     ]);
   });
+
+
+
+
