@@ -57,32 +57,33 @@ section {
 }
 
 .title {
+    display: flex;
+    align-items: center;
     margin: $space-title;
 
     h2 {
-        position: relative;
-        display: flex;
-        align-items: center;
         font-size: $f-s-xl;
-        font-weight: 600;
         border-left: 5px solid $Charcoal;
         padding-left: $space-sm;
+        white-space: nowrap;
 
         span {
             font-size: $f-s-sm;
             padding-left: 10px;
         }
-
-        &::after {
-            position: absolute;
-            content: "";
-            height: 3px;
-            right: 0;
-            width: calc(100% - 10rem);
-            background-color: $Charcoal;
-            // margin-left: 9rem; //相對於文字的位置使用rem
-        }
     }
+
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 100%;
+        height: 3px;
+        background-color: $Charcoal;
+        margin-left: $space-xs;
+    }
+
+
 }
 
 .list-box {
@@ -209,17 +210,73 @@ section {
 }
 
 
-.details-box{
+.details-box {
     display: grid;
     gap: 30px;
     grid-template-columns: 5fr 4fr;
-
 }
+
+// 自訂樣式
+
 
 // jquery ui tab按鍵設定 (需要從F12開發者工具查找它的class)
-.ui-tabs .ui-tabs-nav{
- display: flex;
+
+.ui-widget.ui-widget-content {
+    max-width: 400px;
 }
+
+.ui-tabs .ui-tabs-panel {
+    height: 70vh;
+
+    img {
+        object-fit: contain;
+        height: 100%;
+    }
+
+}
+
+.ui-widget-header {
+    background: transparent;
+    border: none;
+}
+
+.ui-tabs .ui-tabs-nav {
+    //ul
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    //li
+    border-bottom-width: 1px;
+    border-radius: 3px;
+
+}
+
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+    //a
+    padding: 0;
+    height: 80px;
+
+    img {
+        object-fit: cover;
+        height: 100%;
+    }
+}
+
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background: transparent;
+    border: 1px solid $Charcoal;
+}
+
+
 
 
 
