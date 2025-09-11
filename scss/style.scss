@@ -3,6 +3,9 @@
 @use "./function" as *;
 
 
+// *{
+//     outline: 1px red solid;
+// }
 // 換圖輪播
 .swiper {
     width: 100%;
@@ -214,9 +217,23 @@ section {
     display: grid;
     gap: 30px;
     grid-template-columns: 5fr 4fr;
+    
+
+    mark{
+        background: #25ff30;
+    }
+
+    .color1{
+        background-color: #777771;
+    }
+    .color2{
+        background-color: #fcf6e3;
+    }
+    .color3{
+        background-color: #9d6b50;
+    }
 }
 
-// 自訂樣式
 
 
 // jquery ui tab按鍵設定 (需要從F12開發者工具查找它的class)
@@ -226,11 +243,12 @@ section {
 }
 
 .ui-tabs .ui-tabs-panel {
-    height: 70vh;
+    height: auto;
 
     img {
         object-fit: contain;
         height: 100%;
+        max-width: 70vh;
     }
 
 }

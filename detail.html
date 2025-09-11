@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="./css/lightbox.min.css">
     <!-- My CSS -->
     <link rel="stylesheet" href="./css/style.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
 
 
 </head>
@@ -19,7 +21,7 @@
 <body>
     <header class="navbar">NAVBAR</header>
     <section>
-        <main>
+        <main class="w-4/5 mx-auto">
             <header class="title">
                 <h2>ZT系列 軟質 T 恤-中灰色</h2>
             </header>
@@ -38,23 +40,23 @@
                             </a>
                         </div>
                         <div id="tabs-2">
-                             <a href="./images2/details/detail-2.jpg" title="點圖放大的大圖" data-lightbox="photo">
-                            <img src="./images2/details/detail-2.jpg" alt="">
+                            <a href="./images2/details/detail-2.jpg" title="點圖放大的大圖" data-lightbox="photo">
+                                <img src="./images2/details/detail-2.jpg" alt="">
                             </a>
                         </div>
                         <div id="tabs-3">
-                             <a href="./images2/details/detail-3.jpg" title="點圖放大的大圖" data-lightbox="photo">
-                            <img src="./images2/details/detail-3.jpg" alt="">
+                            <a href="./images2/details/detail-3.jpg" title="點圖放大的大圖" data-lightbox="photo">
+                                <img src="./images2/details/detail-3.jpg" alt="">
                             </a>
                         </div>
                         <div id="tabs-4">
-                             <a href="./images2/details/detail-4.jpg" title="點圖放大的大圖" data-lightbox="photo">
-                            <img src="./images2/details/detail-4.jpg" alt="">
+                            <a href="./images2/details/detail-4.jpg" title="點圖放大的大圖" data-lightbox="photo">
+                                <img src="./images2/details/detail-4.jpg" alt="">
                             </a>
                         </div>
                         <div id="tabs-5">
-                             <a href="./images2/details/detail-5.jpg" title="點圖放大的大圖" data-lightbox="photo">
-                            <img src="./images2/details/detail-5.jpg" alt="">
+                            <a href="./images2/details/detail-5.jpg" title="點圖放大的大圖" data-lightbox="photo">
+                                <img src="./images2/details/detail-5.jpg" alt="">
                             </a>
                         </div>
                     </div>
@@ -71,10 +73,53 @@
 
 
                 <!-- 詳細規格 -->
-                <div class="detail"></div>
+                <div class="detail">
+                    <h1 class="text-3xl font-bold mb-3"><data value="3039-468-809"></data>軟質 T 恤</h1>
+
+                    <div class="price text-xl mb-3">
+                        <del class="mx-2">NT$ 990</del>
+                        <mark class="font-bold px-2 py-1">-50%&nbsp;&nbsp;$NT495</mark>
+                    </div>
+
+
+                    <h3 class="text-sm font-bold mb-3">選擇顏色：</h3>
+                    <div class="color-box mb-3">
+                        <button type="button" class="color1 w-8 h-8 mr-1"></button>
+                        <button type="button" class="color2 w-8 h-8 mr-1"></button>
+                        <button type="button" class="color3 w-8 h-8 mr-1"></button>
+                    </div>
+
+                    <h3 class="text-sm font-bold mb-3">選擇尺寸：</h3>
+                    <div class="size-box mb-3">
+                        <button type="button" class="w-9 h-8 border-2 hover:border-green-500">S</button>
+                        <button type="button" class="w-9 h-8 border-2 hover:border-green-500">M</button>
+                        <button type="button" class="w-9 h-8 border-2 hover:border-green-500">L</button>
+                        <button type="button" class="w-9 h-8 border-2 hover:border-green-500">XL</button>
+                    </div>
+
+                    <details>
+                        <summary class="text-sm font-bold mb-3">材質</summary>
+                        <!-- pre不常使用 -->
+                        <pre class="text-sm">45% 亞克力纖維
+33% 聚酯纖維
+22% 聚醯胺纖維
+                        </pre>
+                    </details>
+                    <p>圓領上衣；落肩袖。<br />
+                        模特兒身高：174 cm | 尺碼：XS
+                    </p>
+
+
+                </div>
             </div>
+
             <!-- HTML編輯器 -->
-            <div class="content"></div>
+            <div class="content">
+                <h2 class="text-3xl font-bold mb-3 mt-6">產品細節</h2>
+                <img src="./images2/details/detail-1.jpg" alt="">
+                <img src="./images2/details/detail-2.jpg" alt="">
+                <img src="./images2/details/detail-3.jpg" alt="">
+            </div>
 
 
         </main>
@@ -99,6 +144,16 @@
         $(function () {
             $("#tabs").tabs();
         });
+
+        //lightbox
+
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'showImageNumberLabel': false,
+        })
+
+
     </script>
 </body>
 
